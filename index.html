@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Responsive Admin Dashboard</title>
+ <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
+ <link rel="stylesheet" type="text/css" href="style.css">
+ <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
+ 
+</head>
+
+<body>
+
+    <section class="mainSec">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="leftCol col-lg-2">  
+
+<div class="container">
+<div class="navigation">
+<ul>
+<li>
+  <a href="#">
+<span class="icon"></span>
+<h4>Welcome</h4>
+<span class="title"><h2>FINBANK</h2></span>
+</a>
+</li>
+<li>
+    <a href="#">
+    <span class="icon"><i class="fas fa-home"></i></span>
+    
+    <span class="title">Dashboard</span>
+    </a>
+</li>
+<li>
+    <a href="#">
+    <span class="icon"><i class="fas fa-exchange-alt"></i></span>
+    <span class="title">Transaction</span>
+    </a>
+</li>
+<li>
+    <a href="#">
+    <span class="icon"><i class="fas fa-credit-card"></i></span>
+    <span class="title">Cards</span>
+    </a>
+</li>
+<li>
+    <a href="#">
+    <span class="icon"><i class="fal fa-badge-percent"></i></span>
+    <span class="title">Offers</span>
+    </a>
+</li>
+<li>
+    <a href="#">
+    <span class="icon"><i class="fal fa-sack-dollar"></i></span>
+    <span class="title">Investments</span>
+</a>
+</li>
+
+</ul>
+</div >
+
+
+<div class="main">
+<div class="topbar">
+    <div class="toggle" onclick="toggleMenu();"></div>
+    <div class="search">
+        <label>
+            <input type="text" placeholder="Search transaction, offers, investments ets....">
+            <i class="fa fa-search" aria-hidden="true"></i>
+        </label>
+  
+    </div>
+    <div class="user">
+        <img src="user.jpg">
+    </div>
+</div>
+            
+            <div class="box">
+                        <img src="img3.jpg" height="150px" width="150px" >
+                        <h2>Live Life Confidentaly</h2><br>
+                         Chase your dreams and finish your plan by spending money in insurance<br>
+                        <button class="button button1">Explore insurance</button>
+                     
+            </div>
+            
+            
+            
+             
+                    <div class="cardBox">
+                        <div class="card">
+                            <div>
+                             <div class="name">Monthly <i class="fas fa-caret-down"></i></div>   
+                            <div class="cardname">Deposit</div>
+                                <div class="numbers">$58789.78</div>
+                             </div>
+                             </div>
+                             
+                             <div class="card">
+                                <div>
+                                    <div class="name">Monthly <i class="fas fa-caret-down"></i></div>
+                                    <div class="cardname">Withdrawal</div>
+                                    <div class="numbers">$49780.78</div>
+                                 </div>
+                                 </div>
+                               
+                                 <div class="card">
+                                    <div>
+                                        <div class="name">Monthly <i class="fas fa-caret-down"></i></div>
+                                        <div class="cardname">Savings</div>
+                                        <div class="numbers">$46344.78</div>
+                                     </div>
+                                      </div>   
+                                  </div><br><br>
+                              
+                    <div class="details">
+                        <div class="cashflow">
+                           <div class="cardHeader">
+                               <h2>Cash Flow</h2>
+                                
+                               <div class="dropdown">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  Last Month <i class="fas fa-caret-down"></i>
+                                </button>
+                               <div> <canvas id="myChart" style="display: block; height: 250px;" width="1000" height="400" class="chartjs-render-monitor"></canvas>
+                            
+            </div>
+                                </div>
+                              </div>
+                           </div>
+                        </div>
+                        
+            </div>
+            </div> </div>
+        
+
+       
+
+</body>
+<script>
+    
+
+var ctx = document.getElementById("myChart").getContext('2d');
+    var myChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21 , 22, 23, 24, 25, 26, 27, 28, 29, 30, 31],
+            datasets: [
+                {
+                    label: 'Received',
+                    data: [2530, 580, 4000, 1225, 250, 1200, 0, 0, 0, 0, 0, 0, 0, 1800, 0, 0, 0, 0, 890, 210, 2200, 2500, 800, 750, 3600, 0, 4800, 0, 0, 2800, 0],
+                    backgroundColor: "#172B9F",
+                    borderWidth: 1,
+                },
+                {
+                    label: "Spent",
+                    data: [3525, 1420, 3250, 110, 890, 3680, 0, 0, 560, 0, 0, 0, 0, 1878, 0, 0, 0, 0, 1872, 520, 2874, 2054, 1025, 3341, 3548, 0, 0, 0, 0, 4210, 420],
+                    backgroundColor: "#F42879",
+                    borderWidth: 1,
+                },
+                {
+                    label: "No Transaction",
+                    data: [0, 0, 0, 0, 0, 0, 5000, 5000, 0, 5000, 5000, 5000, 5000, 0, 5000, 5000, 5000, 5000, 0, 0, 0, 0, 0, 0, 0, 5000, 0, 5000, 5000, 0, 0],
+                    backgroundColor: "#E2E3F0",
+                    borderWidth: 1,
+                }
+            ]
+        },
+        options: {
+            scales: {
+                yAxes: [
+                    {
+                            ticks: {
+                                beginAtZero: true,
+                        }
+                    }
+                ]
+            }
+        }
+    });
+
+</script>
+</html>
